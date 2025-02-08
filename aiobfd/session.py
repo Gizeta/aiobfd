@@ -94,7 +94,7 @@ class Session:
         fam, _, _, _, addr = socket.getaddrinfo(self.local, src_port)[0]
         sock = socket.socket(family=fam, type=socket.SOCK_DGRAM)
         if fam == socket.AF_INET:
-            sock.setsockopt(socket.SOL_IP, socket.IP_TTL, 255)
+            sock.setsockopt(socket.IPPROTO_IP, socket.IP_TTL, 255)
         elif fam == socket.AF_INET6:
             # Under Windows the IPv6 socket constant is somehow missing
             # https://bugs.python.org/issue29515

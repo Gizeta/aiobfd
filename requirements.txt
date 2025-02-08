@@ -1,1 +1,1 @@
-bitstring
+bitstring==3.*
