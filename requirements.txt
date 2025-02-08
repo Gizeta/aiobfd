@@ -1,1 +1,2 @@
 bitstring==3.*
+py2exe
